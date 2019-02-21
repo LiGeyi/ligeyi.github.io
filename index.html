@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js" ></script>
+	<script>
+		$.ajax({
+			url : 'https://m.weibo.cn/api/container/getIndex',
+			data : {
+				"type" : "uid",
+				"value" : "2617143030",
+				"containerid":"1076032617143030"
+			},
+			type: 'GET',
+             		dataType:'JSONP',
+			jsonp:"callback",
+             		cache: false,
+             		success: function(res){
+             			console.log(res)
+              		}
+		});
+	</script>
+</html>
